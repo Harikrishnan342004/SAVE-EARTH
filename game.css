@@ -17,6 +17,7 @@ body:before
     background-size: cover;
     background-position: center;
 }
+
 @keyframes duckfly 
 {
     0%
@@ -63,6 +64,14 @@ input + label
 
     
 }
+@media only screen and (max-width: 900px) {
+    input + label{
+       
+        width: 200px;
+        height: 0px;
+       
+    }
+  }
 input:checked + label{
     opacity: 0;
     transition: 0.5s;
@@ -73,31 +82,30 @@ input:checked + label{
 .duck:nth-last-of-type(1){
     
     animation: duckfly 10s linear 1s infinite;
-    cursor: url(bg_ufo.png),auto;z
-
+   
 }
 .duck:nth-last-of-type(2){
     
     animation: duckfly 20s linear 2s infinite;
-    cursor: url("CURSOR.jpg"),auto;
+   
 
 }
 .duck:nth-last-of-type(3){
     
     animation: duckfly 30s linear 3s infinite;
-    cursor: url("city.jpg"),text;
+   
 
 }
 .duck:nth-last-of-type(4){
     
     animation: duckfly 40s linear 4s infinite;
-    cursor: url("city.jpg"),auto;
+   
 
 }
 .duck:nth-last-of-type(5){
     
     animation: duckfly 50s linear 5s infinite;
-    cursor: url("CURSOR.jpg"),text;
+    
 
 }
 .score{
@@ -105,12 +113,13 @@ input:checked + label{
     bottom: 0;
     height: 50px;
     line-height: 50px;
-    background-color: #f7efef;
+    background-color: #cd0000;
     width: 100%;
     z-index: 2;
     text-align: center;
     font-size: 30px;
 }
+
 .score:after{
     content: counter(score);
     display: inline-block;
@@ -124,3 +133,4 @@ input:checked + label{
 input:checked{
     counter-increment: score;
 }
+
